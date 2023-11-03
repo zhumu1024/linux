@@ -211,7 +211,72 @@ else
     # brew link openjdk --force
 fi
 
+brew install ant maven
+#Ant,更灵活，使用 XML 文件来定义构建任务和依赖关系，可以用于编译、打包、测试和部署 Java 应用程序等任务,特别适用于管理和构建 Java 项目。
+# Maven,更加规范化，提供了一种一致的方式来构建、测试、打包和发布 Java 项目，同时管理项目的依赖项。
 
+# pin these
+# brew pin perl
+# brew pin python@3.9
+# brew pin r
+
+# other programming languages
+brew install lua node
+#Lua 编程语言的解释器，Node.js，用于构建服务器端和网络应用程序的 JavaScript 运行时
+
+# taps
+brew tap wang-q/tap
+#tap 是 brew 命令的一个子命令，用于管理 Brew 中的软件包仓库。这行命令是将wang-q/top这个库添加到brew的库中去。
+
+# downloading tools
+brew install aria2 curl wget
+#三个下载工具
+
+# gnu
+brew install gnu-sed gnu-tar
+#gnu版本，相较于普通版本（更重视兼容性）更重视功能性和扩展性
+
+# other tools
+#详细请看[tools](https://github.com/zhumu1024/tools-for-bio/edit/main/README.md) 
+brew install screen stow htop parallel pigz
+brew install tree pv
+brew install jq jid pup
+brew install datamash miller tsv-utils
+brew install librsvg udunits
+brew install proxychains-ng
+
+brew install bat exa tealdeer # tiv
+brew install hyperfine ripgrep tokei
+brew install bottom # zellij
+
+# large packages
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install gpg2
+fi
+
+hash pandoc 2>/dev/null || {
+    brew install pandoc
+}
+
+hash gnuplot 2>/dev/null || {
+    brew install gnuplot
+}
+
+hash dot 2>/dev/null || {
+    brew install graphviz
+}
+
+hash convert 2>/dev/null || {
+    brew install imagemagick
+}
+
+# weird dependancies by Cairo.pm
+#安装一些 X Window System 相关的开发库和协议，用于支持图形用户界面（GUI）应用程序的构建和运行
+# brew install linuxbrew/xorg/libpthread-stubs linuxbrew/xorg/renderproto linuxbrew/xorg/kbproto linuxbrew/xorg/xextproto
+
+# gtk+3
+#支持 GTK+3（GIMP Toolkit）和图形应用程序的构建和运行
+# brew install gsettings-desktop-schemas gtk+3 adwaita-icon-theme gobject-introspection
 
 
 
