@@ -70,7 +70,7 @@ hash cpanm 2>/dev/null || {
         perl - -v --mirror-only --mirror http://mirrors.ustc.edu.cn/CPAN/ App::cpanminus
         #使用 Perl 解释器执行一个命令，该命令下载并安装 cpanm 工具，确保只从指定的 CPAN 镜像站点下载
         # perl 使用perl解释器
-        # --v 显示版本信息
+        # --v 显示版本信息 verbose
         # -- mirror-only 指定下载的镜像源
         #App::cpanminus   cpanm 工具的 Perl 模块版本。
 }
