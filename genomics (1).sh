@@ -4,6 +4,8 @@ echo "====> Building Genomics related tools <===="
 
 echo "==> Anchr"
 # TODO: superreads can't find `jellyfish/circular_buffer.hpp`
+#TODO 通常是一种标记或注释，表示需要在之后完成或解决的任务
+
 # # super reads  错误率低的illumina短reads来搭建较长的super-reads  
 # 
 #  jellyfish 计数 DNA 的 k-mers 的软件。该软件运用 Hash 表来存储数据，同时能多线程运行，速度快，内存消耗小
@@ -14,7 +16,12 @@ echo "==> Anchr"
 # 何事都有两面，k值越大，得到的k-mers的数量会越少，k-mers彼此相连，建立感情的机会就越少，反而不利于Contig的组装
 # 
 #  circular_buffer顾名思义是一个循环缓冲器，其 capcity是固定的当容量满了以后，插入一个元素时，会在容器的开头或结尾处删除一个元素。
+# 缓冲区满了后，新数据会覆盖掉最老的数据。循环缓冲区适用于需要持续更新数据并限制内存使用的情况
+#
+#.hpp 文件是 C++ 编程语言中用于存储 C++ 头文件的扩展名
+
 #   `include/jellyfish-2.2.4/`
+#include 目录通常用于存放头文件（header files）。头文件包含了函数、类或其他源代码文件的声明，允许其他源代码文件在程序编译时引用和使用这些声明
 
 #curl -fsSL https://raw.githubusercontent.com/wang-q/App-Anchr/master/share/install_dep.sh | bash
 
@@ -199,7 +206,7 @@ perl configure \
     #指定Tandem Repeats Finder (TRF) 的位置，$(brew --prefix)/bin/trf是TRF程序的路径
     -default_search_engine=rmblast
 
-#
+# 指定特定版本或位置的依赖项 避免不同版本之间的冲突
 
 cd -
 #cd - 可以切换到上次访问的目录
