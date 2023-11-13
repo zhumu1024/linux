@@ -122,7 +122,7 @@ for d in ${DIRS[@]}; do
     done
 	stow -t "${HOME}" "${d}" -v 2
 	# -t target  将d解压缩到HOME
-	# -v verbose 显示详细信息  -0 不显示  -1 显示默认的  -2显示更信息的
+	# -v verbose 显示详细信息  -0 不显示  -1 显示默认的  -2显示更详细的
 done
 
 # don't ruin Ubuntu
