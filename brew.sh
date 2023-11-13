@@ -63,7 +63,7 @@ else
 fi
 
 hash cpanm 2>/dev/null || {
-# hash 是一个 Bash 内建命令，它的作用是用于跟踪并查找可执行程序的路径 cpanm：perl的安装模块
+# hash 是一个 Bash 内建命令，它的作用是用于跟踪并查找可执行程序的路径 cpanm：Comprehensive Perl Archive Network cpan-perl的安装模块  m min
 # || 或命令，当前一个命令无法执行时，执行下一个命令
 # { } 代表代码块的开始和结束
     curl -L https://cpanmin.us |
